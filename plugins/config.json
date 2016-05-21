@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Server Live Test",
+    "path": "./plugins/scripts/server_live_test",
+    "schedule": "1000",
+    "servers": "all"
+  },
+  {
+    "name": "SMS Gateway Test",
+    "path": "./plugins/scripts/sms_gateway_test",
+    "schedule": "2000",
+    "servers": "all"
+  }
+]

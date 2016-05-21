@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Host-1",
+    "protocol": "http",
+    "url": "host1.hostname.com",
+    "admin": "admin",
+    "password": "password",
+    "alias": "HST1"
+  }
+]
