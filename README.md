@@ -15,7 +15,7 @@ The individual monitoring/maintenance components are built as plugins and additi
 * SMS Gateway Monitoring
 * Backup Process Monitoring
 
-## Medic Mobile Webapp Related Monitoring
+### Medic Mobile Webapp Related Monitoring
 * Monitor the health of projects
   * Date of last report (days ago)
   * Pending outgoing messages that SMS Gateway has yet to pick up
@@ -23,7 +23,7 @@ The individual monitoring/maintenance components are built as plugins and additi
   * Database compaction status
 * Post nightly updates on Slack concerning the state of the servers it monitors.
 
-## Automated Maintenance
+### Automated Maintenance
 Perform common maintence tasks automatically
 * Instance is down
   * Post notification on Slack, tag relevant people
