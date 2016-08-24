@@ -10,5 +10,11 @@
     "path": "./plugins/scripts/sms_gateway_test",
     "schedule": "2000",
     "servers": "all"
+  },
+  {
+    "name": "Server Disk Space Test",
+    "path": "./plugins/scripts/server_disk_space_test",
+    "schedule": "5000",
+    "servers": "all"
   }
 ]

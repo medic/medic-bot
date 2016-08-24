@@ -8,42 +8,26 @@ function server_live_test() {
 
     console.log(dest_url);
 
-    if(host.protocol === 'https'){
-      const https = require('https');
+    var http = require('https');
 
-      https.get(dest_url, (res) => {
-        console.log('statusCode: ', res.statusCode);
-        console.log('headers: ', res.headers);
-
-        res.on('data', (d) => {
-          process.stdout.write(d);
-          if(res.statusCode >= 400){
-            notify_slack(slack_error_msg);
-          }
-        });
-
-      }).on('error', (e) => {
-        console.error(e);
-        notify_slack(slack_error_msg);
-      });
-    } else if (host.protocol === "http") {
-      const http = require('http');
-
-      http.get(dest_url, (res) => {
-        console.log('statusCode: ', res.statusCode);
-        console.log('headers: ', res.headers);
-
-        res.on('data', (d) => {
-          process.stdout.write(d);
-          if(res.statusCode >= 400){
-            notify_slack(slack_error_msg);
-          }
-        });
-      }).on('error', (e) => {
-        console.error(e);
-        notify_slack(slack_error_msg);
-      });
+    if(host.protocol === 'http'){
+      http = require('http');
     }
+
+    http.get(dest_url, (res) => {
+      console.log('statusCode: ', res.statusCode);
+      console.log('headers: ', res.headers);
+
+      res.on('data', (d) => {
+        process.stdout.write(d);
+        if(res.statusCode >= 400){
+          notify_slack(slack_error_msg);
+        }
+      });
+
+    }).on('error', (e) => {
+      console.error(e);
+    });
   });
 }
 
