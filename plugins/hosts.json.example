@@ -5,6 +5,9 @@
     "url": "host1.hostname.com",
     "admin": "admin",
     "password": "password",
+    "ssh_user": "ssh_user_name",
+    "ssh_password": "ssh_password",
+    "ssh_port": ssh_port,
     "alias": "HST1"
   }
 ]
