@@ -7,6 +7,7 @@ The individual monitoring/maintenance components are built as plugins and additi
 
 ## Plugins Provided with the Code
 * Monitor that a server instance is up and running (Configurable schedule) - `server_live_test.js` plugin
+* Monitor Disk Space for server instances - `server_disk_space_test.js` plugin
 
 ## Upcoming Plugins:
 * CouchDB Monitoring
