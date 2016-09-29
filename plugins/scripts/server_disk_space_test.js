@@ -16,7 +16,7 @@ function server_disk_space_test() {
             do
             usep=$(echo $output | awk '{ print $1}' | cut -d'%' -f1  )
             partition=$(echo $output | awk '{ print $2 }' )
-            if [ $usep -ge 90 ]; then
+            if [ $usep -ge 80 ]; then
                 echo "\"$partition [$usep%]\"\"
             fi
             done

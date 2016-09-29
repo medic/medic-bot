@@ -1,20 +1,26 @@
 [
   {
     "name": "Server Live Test",
+    "description": "Tests if servers are online and posts a notification when they're not.",
     "path": "./plugins/scripts/server_live_test",
-    "schedule": "1000",
-    "servers": "all"
+    "schedule": "3000",
+    "servers": "all",
+    "active": true
   },
   {
     "name": "SMS Gateway Test",
+    "description": "Tests if SMS Gateways are online and posts a notification when they are not.",
     "path": "./plugins/scripts/sms_gateway_test",
     "schedule": "2000",
-    "servers": "all"
+    "servers": "all",
+    "active": false
   },
   {
     "name": "Server Disk Space Test",
+    "description": "Tests if server has >20% disk space and posts a notification when free space is <20%",
     "path": "./plugins/scripts/server_disk_space_test",
-    "schedule": "5000",
-    "servers": "all"
+    "schedule": "60000",
+    "servers": "all",
+    "active": true
   }
 ]

@@ -1,10 +1,13 @@
 var hosts = require('../hosts.json');
 var notify_slack = require('../../src/backend/notify_slack')
+var set_status = require('../../src/backend/bot_db').set_status;
+var get_status = require('../../src/backend/bot_db').get_status;
 
 function server_live_test() {
   hosts.forEach(function(host){
     var dest_url = `${host.protocol}://${host.admin}:${host.password}@${host.url}`;
-    var slack_error_msg = `@channel ${host.name} cannot be reached.`;
+    var slack_error_msg = `${host.name} cannot be reached.`;
+    var slack_restoration_msg = `${host.name} is now back up`;
 
     console.log(dest_url);
 
@@ -20,8 +23,19 @@ function server_live_test() {
 
       res.on('data', (d) => {
         process.stdout.write(d);
+
         if(res.statusCode >= 400){
           notify_slack(slack_error_msg);
+          set_status(host.url, 'server_live_test', res.statusCode);
+          
+        } else {
+          
+          if(get_status(host.url, 'server_live_test') >= 400){
+            //This server was down in the last test.
+            notify_slack(slack_restoration_msg);
+          }         
+          
+          set_status(host.url, 'server_live_test', res.statusCode);
         }
       });
 

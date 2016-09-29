@@ -18,6 +18,7 @@
   "homepage": "https://github.com/henokgetachew/medic-bot#readme",
   "dependencies": {
     "later": "^1.2.0",
-    "node-slack": "0.0.7"
+    "node-slack": "0.0.7",
+    "pg": "^6.1.0"
   }
 }

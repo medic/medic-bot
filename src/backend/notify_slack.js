@@ -4,7 +4,7 @@ var config = require('../../config');
 var slack = new Slack(config.slack.web_hook_url);
 
 function notify_slack(message) {
-  console.log("Sending error message to slack...");
+  console.log("Sending message to slack...");
   slack.send(
     {
       text: message,
