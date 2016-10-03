@@ -22,5 +22,13 @@
     "schedule": "60000",
     "servers": "all",
     "active": true
+  },
+  {
+    "name": "CouchDB Compaction Test (*New*)",
+    "description": "Makes sure CouchDB compaction is enabled and working.",
+    "path": "./plugins/scripts/couchdb_compaction_test",
+    "schedule": "720000",
+    "servers": "all",
+    "active": true
   }
 ]
