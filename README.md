@@ -8,8 +8,9 @@ The individual monitoring/maintenance components are built as plugins and additi
 ## Plugins Provided with the Code
 * Monitor that a server instance is up and running (Configurable schedule) - `server_live_test.js` plugin
 * Monitor Disk Space for server instances - `server_disk_space_test.js` plugin
+* Monitor CouchDB compaction is enabled and running - `couchdb_compaction_test.js` plugin
 
-## Upcoming Plugins:
+## Upcoming Features:
 * CouchDB Monitoring
 * Nginx Monitoring
 * API Monitoring
@@ -20,8 +21,6 @@ The individual monitoring/maintenance components are built as plugins and additi
 * Monitor the health of projects
   * Date of last report (days ago)
   * Pending outgoing messages that SMS Gateway has yet to pick up
-  * Disk and Memory Utilization
-  * Database compaction status
 * Post nightly updates on Slack concerning the state of the servers it monitors.
 
 ### Automated Maintenance
