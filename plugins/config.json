@@ -30,5 +30,13 @@
     "schedule": "720000",
     "servers": "all",
     "active": true
+  },
+  {
+    "name": "HTTPS Only Test (*New*)",
+    "description": "Tests whether instances are accessible via insecure http.",
+    "path": "./plugins/scripts/https_only_test",
+    "schedule": "720000",
+    "servers": "all",
+    "active": true
   }
 ]
