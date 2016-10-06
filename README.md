@@ -9,6 +9,7 @@ The individual monitoring/maintenance components are built as plugins and additi
 * Monitor that a server instance is up and running (Configurable schedule) - `server_live_test.js` plugin
 * Monitor Disk Space for server instances - `server_disk_space_test.js` plugin
 * Monitor CouchDB compaction is enabled and running - `couchdb_compaction_test.js` plugin
+* HTTPS Test - `https_only_test.js` plugin
 
 ## Upcoming Features:
 * CouchDB Monitoring
