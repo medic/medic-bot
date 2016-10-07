@@ -1,5 +1,4 @@
 var tasks = require('./plugins/config.json');
-var hosts = require('./plugins/hosts.json');
 var notify_slack = require('./src/backend/notify_slack')
 
 var later = require('later');
