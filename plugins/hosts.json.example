@@ -8,6 +8,8 @@
     "ssh_user": "ssh_user_name",
     "ssh_password": "ssh_password",
     "ssh_port": ssh_port,
+    "webapp_instance": true,
+    "is_production": true,
     "alias": "HST1"
   }
 ]
