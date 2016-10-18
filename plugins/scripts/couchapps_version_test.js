@@ -20,7 +20,7 @@ function couchapps_version_test() {
 
     var market_url_extension = '_db/_design/market/_list/app_versions/apps';
     
-    market_urls.forEach(function(url){
+    market_urls.forEach(function(url, idx){
 
       var dest_url = `${url}${market_url_extension}`;
       var market_res = '';
@@ -34,7 +34,9 @@ function couchapps_version_test() {
 
         res.on('end', () => {
           market_versions[url] = market_res;
-          callback(market_versions);
+          if(idx == market_urls.length - 1) {
+            callback(market_versions);
+          }
         });
       });
     }, this);
@@ -59,6 +61,7 @@ function couchapps_version_test() {
         if(res.statusCode == 200) {
           
           var list_of_apps = JSON.parse(apps_json);
+          console.log(list_of_apps);
 
           list_of_apps.rows.forEach(function(app_info) {
             
