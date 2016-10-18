@@ -24,7 +24,7 @@
     "active": true
   },
   {
-    "name": "CouchDB Compaction Test (*New*)",
+    "name": "CouchDB Compaction Test",
     "description": "Makes sure CouchDB compaction is enabled and working.",
     "path": "./plugins/scripts/couchdb_compaction_test",
     "schedule": "720000",
@@ -32,7 +32,7 @@
     "active": true
   },
   {
-    "name": "HTTPS Only Test (*New*)",
+    "name": "HTTPS Only Test",
     "description": "Tests whether instances are accessible via insecure http.",
     "path": "./plugins/scripts/https_only_test",
     "schedule": "720000",
