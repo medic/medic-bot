@@ -28,15 +28,20 @@ function couchapps_version_test() {
       
       http.get(dest_url, (res) => {
         res.on('data', (d) => {
-          process.stdout.write(d);
-          market_res += d;
+          if(d){
+            process.stdout.write(d);
+            market_res += d;
+          }
         });
 
         res.on('end', () => {
-          market_versions[url] = market_res;
-          if(idx == market_urls.length - 1) {
-            callback(market_versions);
+          if(market_res){
+            market_versions[url] = market_res;
+            if(idx == market_urls.length - 1) {
+              callback(market_versions);
+            }
           }
+          
         });
       });
     }, this);
