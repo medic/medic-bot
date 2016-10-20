@@ -28,6 +28,6 @@ tasks.forEach(function(task){
       console.log(`${task.name} Schedule set every ${min} minutes`);
     }
 
-    notify_slack(`*Plugin Name*: ${task.name}\n*Description*: ${task.description} \n*Schedule*: Runs every ${scheduleText}.`);
+    //notify_slack(`*Plugin Name*: ${task.name}\n*Description*: ${task.description} \n*Schedule*: Runs every ${scheduleText}.`);
   }
 });
