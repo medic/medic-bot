@@ -35,7 +35,7 @@
     "name": "HTTPS Only Test",
     "description": "Tests whether instances are accessible via insecure http.",
     "path": "./plugins/scripts/https_only_test",
-    "schedule": "720000",
+    "schedule": "10080000",
     "servers": "all",
     "active": true
   },
@@ -43,7 +43,7 @@
     "name": "CouchApps Latest Version Test",
     "description": "Tests whether instances have latest versions of the couchapps",
     "path": "./plugins/scripts/couchapps_version_test",
-    "schedule": "500",
+    "schedule": "10080000",
     "servers": "all",
     "active": true
   },
@@ -51,7 +51,7 @@
     "name": "Couchdb Fragmentation Test",
     "description": "Tests whether couchdb db fragmentation exceeds 70% and view fragmentation exceeds 60%",
     "path": "./plugins/scripts/couchdb_fragmentation_test",
-    "schedule": "720000",
+    "schedule": "10080000",
     "servers": "all",
     "active": true
   }  
