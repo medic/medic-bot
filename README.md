@@ -11,6 +11,7 @@ The individual monitoring/maintenance components are built as plugins and additi
 * Monitor CouchDB compaction is enabled and running - `couchdb_compaction_test.js` plugin
 * HTTPS and Certificate Expiration Test - `https_only_test.js` plugin
 * COUCHApps (Specifically Kanso apps) latest version test (Checks whether [garden apps](https://staging.dev.medicmobile.org/) are upgraded) - `couchapps_version_test.js`
+* CouchDB Fragmentation Test - `couchdb_fragmentation_test.js`
 
 ## Notes
 * MedicBot needs to be supervised by another process like Supervisord so that it is always up and running and is restarted in case of crashes
