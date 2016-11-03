@@ -25,7 +25,7 @@ function server_live_test() {
         process.stdout.write(d);
 
         if(res.statusCode >= 400){
-          notify_slack(slack_error_msg + `Status Code: ${res.statusCode}`);
+          notify_slack(slack_error_msg + ` Status Code: ${res.statusCode}`);
           set_status(host.url, 'server_live_test', res.statusCode);
           
         } else {
