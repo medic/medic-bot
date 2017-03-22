@@ -5,6 +5,10 @@ var get_status = require('../../src/backend/bot_db').get_status;
 
 function server_live_test() {
   hosts.forEach(function(host){
+    if(!host.active){
+      continue;
+    }
+
     var dest_url = `${host.protocol}://${host.admin}:${host.password}@${host.url}`;
     var slack_error_msg = `${host.url} cannot be reached.`;
     var slack_restoration_msg = `${host.url} is now back up.`;
