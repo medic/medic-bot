@@ -5,8 +5,8 @@ var get_status = require('../../src/backend/bot_db').get_status;
 
 function server_live_test() {
   hosts.forEach(function(host){
-    if(!host.active){
-      continue;
+    if(host.active && !host.active){
+      return;
     }
 
     var dest_url = `${host.protocol}://${host.admin}:${host.password}@${host.url}`;
