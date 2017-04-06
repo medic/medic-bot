@@ -5,7 +5,7 @@ var get_status = require('../../src/backend/bot_db').get_status;
 
 function server_live_test() {
   hosts.forEach(function(host){
-    if(host.active && !host.active){
+    if(!host.active){
       return;
     }
 
