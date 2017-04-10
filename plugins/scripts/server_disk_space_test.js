@@ -5,6 +5,10 @@ var hosts = require('../hosts.json');
 
 function server_disk_space_test() {
     hosts.forEach(function(host) {
+        if(!host.active){
+           return;
+        }
+        
         var ssh = new SSH({
             host: host.url,
             user: host.ssh_user,
