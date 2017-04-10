@@ -54,5 +54,13 @@
     "schedule": "10080000",
     "servers": "all",
     "active": true
-  }  
+  },
+  {
+    "name": "Node Version Test",
+    "description": "Tests whether the node version in use by the instance is the new one",
+    "path": "./plugins/scripts/node_version_test",
+    "schedule": "10080000",
+    "servers": "all",
+    "active": true
+  }
 ]
