@@ -62,5 +62,13 @@
     "schedule": "10080000",
     "servers": "all",
     "active": true
+  },
+  {
+    "name": "Couchdb Conflicts Test",
+    "description": "Tests whether there are unresolved conflicts in couchdb",
+    "path": "./plugins/scripts/couchdb_doc_conflicts",
+    "schedule": "10080000",
+    "servers": "all",
+    "active": true
   }
 ]
