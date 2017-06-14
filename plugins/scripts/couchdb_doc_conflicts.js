@@ -31,7 +31,7 @@ function couchdb_doc_conflicts() {
   
   hosts.forEach(function(host){
     var db_name = 'medic';
-    var conflicts_view = '_design/medic-conflicts/conflicts';
+    var conflicts_view = '_design/medic-conflicts/_view/conflicts';
     var dest_url_conflicts = `https://${host.admin}:${host.password}@${host.url}/${db_name}/${conflicts_view}`;
 
     process_conflicts_object(dest_url_conflicts, function(view_output){
