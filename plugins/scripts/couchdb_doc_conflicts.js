@@ -39,7 +39,7 @@ function couchdb_doc_conflicts() {
       var conflicts_count = conflicts_json["total_rows"];
 
       if(conflicts_count > 0){
-        notify_slack(`Warning: ${host.url} *Document conflicts* Count of conflicts: *${conflicts_count}%*`);
+        notify_slack(`Warning: ${host.url} *Document conflicts* Count of conflicts: *${conflicts_count}*`);
       }
     });
   });
