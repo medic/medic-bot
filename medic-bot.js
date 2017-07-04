@@ -4,6 +4,8 @@ var notify_slack = require('./src/backend/notify_slack')
 var later = require('later');
 var scripts = [];
 
+console.log(tasks);
+
 tasks.forEach(function(task){
   var min = task.schedule/1000;
   var scriptToRun = require(task.path)
