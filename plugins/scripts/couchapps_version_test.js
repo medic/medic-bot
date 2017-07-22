@@ -79,7 +79,7 @@ function couchapps_version_test() {
 
             if(host.is_production && app_info.key.indexOf('markets-release') == -1){
               notify_slack(`${host.url} - The app *${app_name}* is not on production release.  Installed version is: *${version_present}* from ${app_info.key}`);
-            } else if(version_should_be != version_present){
+            } else if(version_should_be && version_should_be != version_present){
               notify_slack(`${host.url} - The app *${app_name}* is on version *${version_present}* it should be upgraded to *${version_should_be}*`);
             }
 
