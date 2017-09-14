@@ -35,6 +35,7 @@ function is_server_found(server){
 
 
 function add_or_upgrade_host(server){
+    console.log(`Checking server ${server.host}`);
     if(!is_server_found(server)){
         var ssh_password = ssh_vs_couchdb === 'ssh' ? server.password: "";
         var couchdb_password = ssh_vs_couchdb === 'couchdb' ? server.password: "";
@@ -77,7 +78,7 @@ csv2json()
         add_or_upgrade_host(server);
 })
 .on('done',(error)=>{
-        console.log('Finished parsing csv and building server list.');
+        console.log(`Finished parsing csv and building server list.  Total=${one_pass_hosts.length}`);
         save_hosts_file();
 });
 

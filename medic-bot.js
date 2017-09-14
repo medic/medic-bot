@@ -45,6 +45,7 @@ tasks.forEach(function(task){
         t = later.setInterval(scriptToRun, sched);
       
       console.log(`${task.name} Schedule set every ${scheduleText}`);
+      console.log(`Next 2 iterations: ` + later.schedule(sched).next(2));
     }
 
     //notify_slack(`*Plugin Name*: ${task.name}\n*Description*: ${task.description} \n*Schedule*: Runs every ${scheduleText}.`);
