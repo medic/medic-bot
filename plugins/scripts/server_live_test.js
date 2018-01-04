@@ -9,7 +9,7 @@ function server_live_test() {
       return;
     }
 
-    var dest_url = `${host.protocol}://${host.admin}:${host.password}@${host.url}`;
+    var dest_url = `${host.protocol}://${host.admin}:${host.password}@${host.url}/setup/poll`;
     var slack_error_msg = `${host.url} cannot be reached.`;
     var slack_restoration_msg = `${host.url} is now back up.`;
 
