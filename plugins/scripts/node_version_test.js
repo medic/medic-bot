@@ -20,9 +20,9 @@ function node_version_test() {
 
         ssh.exec(node_version_check,{
             out: function(stdout){
-                if(stdout != ''){
+                if(stdout && stdout != "\n"){
                     var node_version = stdout;
-                    var major_version = stdout.replace('v','').split('.')[0];
+                    var major_version = node_version.replace('v','').split('.')[0];
                     
                     if(major_version < min_node_version){
                         slack_error_msg = `*Warning*: ${host.url} Node version warning. *${node_version.trim()}*`;
