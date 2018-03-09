@@ -30,16 +30,6 @@ function server_live_test() {
 
         if(res.statusCode >= 400){
           notify_slack(slack_error_msg + ` Status Code: ${res.statusCode}`);
-          set_status(host.url, 'server_live_test', res.statusCode);
-          
-        } else {
-          
-          if(get_status(host.url, 'server_live_test') >= 400){
-            //This server was down in the last test.
-            notify_slack(slack_restoration_msg);
-          }
-          
-          set_status(host.url, 'server_live_test', res.statusCode);
         }
       });
 
