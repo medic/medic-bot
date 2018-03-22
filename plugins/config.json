@@ -70,5 +70,13 @@
     "schedule": "10080000",
     "servers": "all",
     "active": true
+  },
+  {
+    "name": "Date/Time monitoring",
+    "description": "Makes sure that date/time sync is working on servers",
+    "path": "./plugins/scripts/date_time_test",
+    "schedule": "60000",
+    "servers": "all",
+    "active": false
   }
 ]
