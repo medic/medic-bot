@@ -24,7 +24,7 @@ function date_time_test() {
                     var server_date = stdout;
                     var server_date_js = Date.parse(server_date);
                     var diff = Math.abs(server_date_js - current_date);
-                    if(diff >= 2000){
+                    if(diff >= 120000){
                         slack_error_msg = `*Warning*: ${host.url} Incorrect date warning on server: *${Date(server_date)}*`;
                         notify_slack(slack_error_msg);
                     }
