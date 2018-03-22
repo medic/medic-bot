@@ -16,7 +16,8 @@ function couchapps_version_test() {
                         "https://staging.dev.medicmobile.org/markets-rc/",
                         "https://staging.dev.medicmobile.org/markets-release-v2/",
                         "https://staging.dev.medicmobile.org/markets-beta/",
-                        "https://staging.dev.medicmobile.org/markets-alpha/"];
+                        "https://staging.dev.medicmobile.org/markets-alpha/",
+                        "https://staging.dev.medicmobile.org/markets-release-v214/"];
 
     var market_url_extension = '_db/_design/market/_list/app_versions/apps';
     
@@ -82,7 +83,6 @@ function couchapps_version_test() {
             } else if(version_should_be && version_should_be != version_present){
               notify_slack(`${host.url} - The app *${app_name}* is on version *${version_present}* it should be upgraded to *${version_should_be}*`);
             }
-
           }, this);
         }
       });
