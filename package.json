@@ -1,25 +1,29 @@
 {
   "name": "medic-bot",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "## Description MedicBot monitors important processes required for the smooth running of servers and if and when problems are detected, it will post to slack.",
   "main": "medic-bot.js",
+  "dependencies": {
+    "later": "^1.2.0",
+    "node-slack": "^0.0.7",
+    "pg": "^6.4.2",
+    "simple-ssh": "^0.9.0",
+    "cradle": "^0.7.1",
+    "moment": "^2.22.1",
+    "sqlite3": "^4.0.0"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/henokgetachew/medic-bot.git"
+    "url": "git+https://github.com/billwambua/medic-bot.git"
   },
-  "author": "",
+  "author": "Bill Wambua",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/henokgetachew/medic-bot/issues"
+    "url": "https://github.com/billwambua/medic-bot/issues"
   },
-  "homepage": "https://github.com/henokgetachew/medic-bot#readme",
-  "dependencies": {
-    "later": "^1.2.0",
-    "node-slack": "0.0.7",
-    "pg": "^6.1.0",
-    "simple-ssh": "^0.9.0"
-  }
+  "homepage": "https://github.com/billwambua/medic-bot#readme"
 }
