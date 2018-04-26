@@ -18,12 +18,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/billwambua/medic-bot.git"
+    "url": "git+https://github.com/medic/medic-bot.git"
   },
-  "author": "Bill Wambua",
+  "author": "Henok Getachew",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/billwambua/medic-bot/issues"
+    "url": "https://github.com/medic/medic-bot/issues"
   },
-  "homepage": "https://github.com/billwambua/medic-bot#readme"
+  "homepage": "https://github.com/medic/medic-bot#readme"
 }
