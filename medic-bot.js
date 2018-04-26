@@ -28,21 +28,22 @@ tasks.forEach(function(task){
   }
   
   if(task.active) {
+    let sched, t;
     if(min > 60){
       if(hours && hours > 24){
-        var sched = later.parse.recur().on(days).dayOfWeek();
-          t = later.setInterval(scriptToRun, sched);
+        sched = later.parse.recur().on(days).dayOfWeek();
+        t = later.setInterval(scriptToRun, sched);
         
         console.log(`${task.name} Schedule set every ${scheduleText}`);      
       } else {
-        var sched = later.parse.recur().every(hours).hour(),
-          t = later.setInterval(scriptToRun, sched);
+        sched = later.parse.recur().every(hours).hour();
+        t = later.setInterval(scriptToRun, sched);
         
         console.log(`${task.name} Schedule set every ${scheduleText}`);      
       }
     } else {
-      var sched = later.parse.recur().every(min).minute(),
-        t = later.setInterval(scriptToRun, sched);
+      sched = later.parse.recur().every(min).minute();
+      t = later.setInterval(scriptToRun, sched);
       
       console.log(`${task.name} Schedule set every ${scheduleText}`);
       console.log(`Next 2 iterations: ` + later.schedule(sched).next(2));
