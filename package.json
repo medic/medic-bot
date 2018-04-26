@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/henokgetachew/medic-bot.git"
+    "url": "git+https://github.com/medic/medic-bot.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/henokgetachew/medic-bot/issues"
+    "url": "https://github.com/medic/medic-bot/issues"
   },
-  "homepage": "https://github.com/henokgetachew/medic-bot#readme",
+  "homepage": "https://github.com/medic/medic-bot#readme",
   "dependencies": {
     "later": "^1.2.0",
     "node-slack": "0.0.7",
