@@ -131,7 +131,7 @@ function detect_msg_loop() {
                                         });
 
                                         //Code to send to Slack channel here
-                                        slack_error_msg = '*Loop Message Alert*: The number ${from} has been sending the message below *${repeats} times today. ```${message}```';
+                                        slack_error_msg = "*Loop Message Alert*: The number " + from +" has been sending the message below *" + repeats +"* times today. ```" + message + "```";
                                         notify_slack(slack_error_msg);
                                     } else {
 
