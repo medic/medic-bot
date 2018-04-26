@@ -81,7 +81,7 @@
   },
   {
     "name": "Message Loop Detector",
-    "description": "Detectes message loops forming in the instance ",
+    "description": "Detectes message loops forming in an instance ",
     "path": "./plugins/scripts/detect_msg_loop",
     "schedule": "60000",
     "servers": "all",
