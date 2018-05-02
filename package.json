@@ -4,7 +4,7 @@
   "description": "",
   "main": "medic-bot.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jshint medic-bot.js src/*.js src/**/*.js utils/*.js utils/**/*.js plugins/*.js plugins/**/*.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/medic/medic-bot#readme",
   "dependencies": {
+    "jshint": "^2.9.5",
     "later": "^1.2.0",
     "node-slack": "0.0.7",
     "pg": "^6.1.0",
