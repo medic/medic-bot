@@ -78,5 +78,13 @@
     "schedule": "60000",
     "servers": "all",
     "active": true
+  },
+  {
+    "name": "Klipfolio datasources monitoring",
+    "description": "Ensures specified datasources are refreshing",
+    "path": "./plugins/scripts/klipfolio_datasources_test.js",
+    "schedule": "720000",
+    "servers": "all",
+    "active": true
   }
 ]
