@@ -12,15 +12,20 @@ var datasources = require('../klipfolio/data_sources.json');
 var notify_slack = require('../../src/backend/notify_slack');
 var https = require('https');
 
-var base_url = `app.klipfolio.com/api/1/datasource-instances`;
-
 function fetchDatasource(ds, uuid) {
-    var url = `https://${ds.user}:${ds.password}@${base_url}/${uuid}`;
+    var path = `/api/1/datasource-instances/${uuid}`;
+    var options = {
+        auth: `${ds.user}:${ds.password}`,
+        method: 'GET',
+        port: 443,
+        hostname: 'app.klipfolio.com',
+        path: path
+    };
     var body = '';
     var msg = '';
     var json;
 
-    https.get(url, (res) => {
+    https.get(options, (res) => {
         res.on('data', (d) => {
             if(res.statusCode === 200) {
                 body += d;
@@ -41,6 +46,7 @@ function fetchDatasource(ds, uuid) {
                     console.log(`${ds.name}: all looks ok for ${uuid}`);
                 }
             }
+
 
             if(msg !== '') {
                 msg = `*${ds.name}*: ${msg}`;
@@ -69,5 +75,7 @@ function klipfolio_datasources_test() {
         }
   });
 }
+
+klipfolio_datasources_test();
 
 module.exports = klipfolio_datasources_test;
