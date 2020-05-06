@@ -64,7 +64,9 @@ function loopWithTimeout(ds, counter) {
 
 function klipfolio_datasources_test() {
     datasources.forEach(function(ds){
-        loopWithTimeout(ds, ds.datasources_uuids.length);
+        if (ds.active) {
+            loopWithTimeout(ds, ds.datasources_uuids.length);
+        }
   });
 }
 

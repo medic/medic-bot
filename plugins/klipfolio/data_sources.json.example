@@ -3,6 +3,7 @@
         "name": "LG Innovation Network's Data sources",
         "user": "test@user.com",
         "password": "pass",
+        "active": true,
         "datasources_uuids": [
             "27075d0a083edc4aa310e4c8f6216781",
             "127075d0a083edc4aa310e4c8f621697"
